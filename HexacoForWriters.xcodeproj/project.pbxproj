@@ -37,6 +37,18 @@
 		156EDEE324D646AD00D91BF5 /* HexacoInventoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDECE24D646AD00D91BF5 /* HexacoInventoryItem.swift */; };
 		156EDEE424D646AD00D91BF5 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDECF24D646AD00D91BF5 /* Character.swift */; };
 		156EDEE524D646AD00D91BF5 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDECF24D646AD00D91BF5 /* Character.swift */; };
+		156EDF0324D651DF00D91BF5 /* HexacoForWritersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDF0224D651DF00D91BF5 /* HexacoForWritersTests.swift */; };
+		156EDF0A24D6520000D91BF5 /* Hexaco60CompletedInventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDEC824D646AD00D91BF5 /* Hexaco60CompletedInventory.swift */; };
+		156EDF0B24D6520000D91BF5 /* Hexaco60InventoryScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDECA24D646AD00D91BF5 /* Hexaco60InventoryScore.swift */; };
+		156EDF0C24D6520000D91BF5 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDECF24D646AD00D91BF5 /* Character.swift */; };
+		156EDF0D24D6520000D91BF5 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDEC724D646AC00D91BF5 /* Gender.swift */; };
+		156EDF0E24D6520000D91BF5 /* Hexaco60ItemScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDECC24D646AD00D91BF5 /* Hexaco60ItemScore.swift */; };
+		156EDF0F24D6520000D91BF5 /* Hexaco60Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDECB24D646AD00D91BF5 /* Hexaco60Scale.swift */; };
+		156EDF1024D6520000D91BF5 /* Hexaco60Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDEC524D646AC00D91BF5 /* Hexaco60Inventory.swift */; };
+		156EDF1124D6520000D91BF5 /* HexacoFactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDEC924D646AD00D91BF5 /* HexacoFactor.swift */; };
+		156EDF1224D6520000D91BF5 /* Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDECD24D646AD00D91BF5 /* Scale.swift */; };
+		156EDF1324D6520000D91BF5 /* HexacoInventoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDECE24D646AD00D91BF5 /* HexacoInventoryItem.swift */; };
+		156EDF1424D6520000D91BF5 /* Hexaco60FactorScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDEC624D646AC00D91BF5 /* Hexaco60FactorScore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +65,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 156EDE9524D6453B00D91BF5;
 			remoteInfo = "HexacoForWriters (macOS)";
+		};
+		156EDF0524D651DF00D91BF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 156EDE8224D6453A00D91BF5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 156EDE8D24D6453B00D91BF5;
+			remoteInfo = "HexacoForWriters (iOS)";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -82,6 +101,9 @@
 		156EDECD24D646AD00D91BF5 /* Scale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scale.swift; sourceTree = "<group>"; };
 		156EDECE24D646AD00D91BF5 /* HexacoInventoryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexacoInventoryItem.swift; sourceTree = "<group>"; };
 		156EDECF24D646AD00D91BF5 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		156EDF0024D651DF00D91BF5 /* HexacoForWritersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HexacoForWritersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		156EDF0224D651DF00D91BF5 /* HexacoForWritersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexacoForWritersTests.swift; sourceTree = "<group>"; };
+		156EDF0424D651DF00D91BF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +135,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		156EDEFD24D651DF00D91BF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -124,6 +153,7 @@
 				156EDE9724D6453B00D91BF5 /* macOS */,
 				156EDEA124D6453B00D91BF5 /* Tests iOS */,
 				156EDEAC24D6453B00D91BF5 /* Tests macOS */,
+				156EDF0124D651DF00D91BF5 /* HexacoForWritersTests */,
 				156EDE8F24D6453B00D91BF5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -146,6 +176,7 @@
 				156EDE9624D6453B00D91BF5 /* HexacoForWriters.app */,
 				156EDE9E24D6453B00D91BF5 /* Tests iOS.xctest */,
 				156EDEA924D6453B00D91BF5 /* Tests macOS.xctest */,
+				156EDF0024D651DF00D91BF5 /* HexacoForWritersTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,6 +232,15 @@
 				156EDECD24D646AD00D91BF5 /* Scale.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		156EDF0124D651DF00D91BF5 /* HexacoForWritersTests */ = {
+			isa = PBXGroup;
+			children = (
+				156EDF0224D651DF00D91BF5 /* HexacoForWritersTests.swift */,
+				156EDF0424D651DF00D91BF5 /* Info.plist */,
+			);
+			path = HexacoForWritersTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +316,24 @@
 			productReference = 156EDEA924D6453B00D91BF5 /* Tests macOS.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		156EDEFF24D651DF00D91BF5 /* HexacoForWritersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 156EDF0724D651DF00D91BF5 /* Build configuration list for PBXNativeTarget "HexacoForWritersTests" */;
+			buildPhases = (
+				156EDEFC24D651DF00D91BF5 /* Sources */,
+				156EDEFD24D651DF00D91BF5 /* Frameworks */,
+				156EDEFE24D651DF00D91BF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				156EDF0624D651DF00D91BF5 /* PBXTargetDependency */,
+			);
+			name = HexacoForWritersTests;
+			productName = HexacoForWritersTests;
+			productReference = 156EDF0024D651DF00D91BF5 /* HexacoForWritersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -299,6 +357,10 @@
 						CreatedOnToolsVersion = 12.0;
 						TestTargetID = 156EDE9524D6453B00D91BF5;
 					};
+					156EDEFF24D651DF00D91BF5 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 156EDE8D24D6453B00D91BF5;
+					};
 				};
 			};
 			buildConfigurationList = 156EDE8524D6453A00D91BF5 /* Build configuration list for PBXProject "HexacoForWriters" */;
@@ -318,6 +380,7 @@
 				156EDE9524D6453B00D91BF5 /* HexacoForWriters (macOS) */,
 				156EDE9D24D6453B00D91BF5 /* Tests iOS */,
 				156EDEA824D6453B00D91BF5 /* Tests macOS */,
+				156EDEFF24D651DF00D91BF5 /* HexacoForWritersTests */,
 			);
 		};
 /* End PBXProject section */
@@ -347,6 +410,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		156EDEA724D6453B00D91BF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		156EDEFE24D651DF00D91BF5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -412,6 +482,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		156EDEFC24D651DF00D91BF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				156EDF0A24D6520000D91BF5 /* Hexaco60CompletedInventory.swift in Sources */,
+				156EDF1424D6520000D91BF5 /* Hexaco60FactorScore.swift in Sources */,
+				156EDF0E24D6520000D91BF5 /* Hexaco60ItemScore.swift in Sources */,
+				156EDF0D24D6520000D91BF5 /* Gender.swift in Sources */,
+				156EDF1324D6520000D91BF5 /* HexacoInventoryItem.swift in Sources */,
+				156EDF0F24D6520000D91BF5 /* Hexaco60Scale.swift in Sources */,
+				156EDF0324D651DF00D91BF5 /* HexacoForWritersTests.swift in Sources */,
+				156EDF1124D6520000D91BF5 /* HexacoFactor.swift in Sources */,
+				156EDF0B24D6520000D91BF5 /* Hexaco60InventoryScore.swift in Sources */,
+				156EDF1024D6520000D91BF5 /* Hexaco60Inventory.swift in Sources */,
+				156EDF1224D6520000D91BF5 /* Scale.swift in Sources */,
+				156EDF0C24D6520000D91BF5 /* Character.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -424,6 +513,11 @@
 			isa = PBXTargetDependency;
 			target = 156EDE9524D6453B00D91BF5 /* HexacoForWriters (macOS) */;
 			targetProxy = 156EDEAA24D6453B00D91BF5 /* PBXContainerItemProxy */;
+		};
+		156EDF0624D651DF00D91BF5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 156EDE8D24D6453B00D91BF5 /* HexacoForWriters (iOS) */;
+			targetProxy = 156EDF0524D651DF00D91BF5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -721,6 +815,51 @@
 			};
 			name = Release;
 		};
+		156EDF0824D651DF00D91BF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LAGG8K2H98;
+				INFOPLIST_FILE = HexacoForWritersTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.qalang.HexacoForWritersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HexacoForWriters.app/HexacoForWriters";
+			};
+			name = Debug;
+		};
+		156EDF0924D651DF00D91BF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LAGG8K2H98;
+				INFOPLIST_FILE = HexacoForWritersTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.qalang.HexacoForWritersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HexacoForWriters.app/HexacoForWriters";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -765,6 +904,15 @@
 			buildConfigurations = (
 				156EDEC224D6453B00D91BF5 /* Debug */,
 				156EDEC324D6453B00D91BF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		156EDF0724D651DF00D91BF5 /* Build configuration list for PBXNativeTarget "HexacoForWritersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				156EDF0824D651DF00D91BF5 /* Debug */,
+				156EDF0924D651DF00D91BF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
