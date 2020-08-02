@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct Character {
+struct Character: Identifiable {
+    var id = UUID()
     // TODO: Integrate random name generator
     var firstName: String?
     var lastName: String?

@@ -8,17 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    var characters = Character.testData
     
     var body: some View {
         TabView {
-            Text("Hello, world!").padding()
+            Text("New Inventory").padding()
                 .tabItem {
                     Label("New Inventory", image: "plus")
                 }
-            Text("Hello, world!").padding()
-                .tabItem {
-                    Label("Completed Inventories", image: "clock.fill")
-                }
+            CompletedInventoryList(characters: characters)
         }
         
     }
