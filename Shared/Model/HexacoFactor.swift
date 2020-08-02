@@ -8,6 +8,8 @@
 
 import Foundation
 
-enum HexacoFactor {
+enum HexacoFactor: String {
     case h, e, x, a, c, o
+    
+    
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1520B73E24D70B5100DC7495 /* NewCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1520B73D24D70B5100DC7495 /* NewCharacterView.swift */; };
+		1520B73F24D70B5100DC7495 /* NewCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1520B73D24D70B5100DC7495 /* NewCharacterView.swift */; };
 		156EDEA324D6453B00D91BF5 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDEA224D6453B00D91BF5 /* Tests_iOS.swift */; };
 		156EDEAE24D6453B00D91BF5 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDEAD24D6453B00D91BF5 /* Tests_macOS.swift */; };
 		156EDEB024D6453B00D91BF5 /* HexacoForWritersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDE8724D6453A00D91BF5 /* HexacoForWritersApp.swift */; };
@@ -49,8 +51,8 @@
 		156EDF1224D6520000D91BF5 /* Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDECD24D646AD00D91BF5 /* Scale.swift */; };
 		156EDF1324D6520000D91BF5 /* HexacoInventoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDECE24D646AD00D91BF5 /* HexacoInventoryItem.swift */; };
 		156EDF1424D6520000D91BF5 /* Hexaco60FactorScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDEC624D646AC00D91BF5 /* Hexaco60FactorScore.swift */; };
-		156EDF1724D682E200D91BF5 /* CompletedInventoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDF1624D682E200D91BF5 /* CompletedInventoryList.swift */; };
-		156EDF1824D682E200D91BF5 /* CompletedInventoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDF1624D682E200D91BF5 /* CompletedInventoryList.swift */; };
+		156EDF1724D682E200D91BF5 /* CompletedInventoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDF1624D682E200D91BF5 /* CompletedInventoryListView.swift */; };
+		156EDF1824D682E200D91BF5 /* CompletedInventoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDF1624D682E200D91BF5 /* CompletedInventoryListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1520B73D24D70B5100DC7495 /* NewCharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCharacterView.swift; sourceTree = "<group>"; };
 		156EDE8724D6453A00D91BF5 /* HexacoForWritersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexacoForWritersApp.swift; sourceTree = "<group>"; };
 		156EDE8824D6453A00D91BF5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		156EDE8924D6453B00D91BF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,7 +109,7 @@
 		156EDF0024D651DF00D91BF5 /* HexacoForWritersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HexacoForWritersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		156EDF0224D651DF00D91BF5 /* HexacoForWritersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexacoForWritersTests.swift; sourceTree = "<group>"; };
 		156EDF0424D651DF00D91BF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		156EDF1624D682E200D91BF5 /* CompletedInventoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedInventoryList.swift; sourceTree = "<group>"; };
+		156EDF1624D682E200D91BF5 /* CompletedInventoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedInventoryListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,7 +253,8 @@
 			isa = PBXGroup;
 			children = (
 				156EDE8824D6453A00D91BF5 /* ContentView.swift */,
-				156EDF1624D682E200D91BF5 /* CompletedInventoryList.swift */,
+				156EDF1624D682E200D91BF5 /* CompletedInventoryListView.swift */,
+				1520B73D24D70B5100DC7495 /* NewCharacterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -442,13 +446,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1520B73E24D70B5100DC7495 /* NewCharacterView.swift in Sources */,
 				156EDEE424D646AD00D91BF5 /* Character.swift in Sources */,
 				156EDEB224D6453B00D91BF5 /* ContentView.swift in Sources */,
 				156EDEE224D646AD00D91BF5 /* HexacoInventoryItem.swift in Sources */,
 				156EDED424D646AD00D91BF5 /* Gender.swift in Sources */,
 				156EDEDC24D646AD00D91BF5 /* Hexaco60Scale.swift in Sources */,
 				156EDED224D646AD00D91BF5 /* Hexaco60FactorScore.swift in Sources */,
-				156EDF1724D682E200D91BF5 /* CompletedInventoryList.swift in Sources */,
+				156EDF1724D682E200D91BF5 /* CompletedInventoryListView.swift in Sources */,
 				156EDED824D646AD00D91BF5 /* HexacoFactor.swift in Sources */,
 				156EDED024D646AD00D91BF5 /* Hexaco60Inventory.swift in Sources */,
 				156EDED624D646AD00D91BF5 /* Hexaco60CompletedInventory.swift in Sources */,
@@ -463,13 +468,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1520B73F24D70B5100DC7495 /* NewCharacterView.swift in Sources */,
 				156EDEE524D646AD00D91BF5 /* Character.swift in Sources */,
 				156EDEB324D6453B00D91BF5 /* ContentView.swift in Sources */,
 				156EDEE324D646AD00D91BF5 /* HexacoInventoryItem.swift in Sources */,
 				156EDED524D646AD00D91BF5 /* Gender.swift in Sources */,
 				156EDEDD24D646AD00D91BF5 /* Hexaco60Scale.swift in Sources */,
 				156EDED324D646AD00D91BF5 /* Hexaco60FactorScore.swift in Sources */,
-				156EDF1824D682E200D91BF5 /* CompletedInventoryList.swift in Sources */,
+				156EDF1824D682E200D91BF5 /* CompletedInventoryListView.swift in Sources */,
 				156EDED924D646AD00D91BF5 /* HexacoFactor.swift in Sources */,
 				156EDED124D646AD00D91BF5 /* Hexaco60Inventory.swift in Sources */,
 				156EDED724D646AD00D91BF5 /* Hexaco60CompletedInventory.swift in Sources */,

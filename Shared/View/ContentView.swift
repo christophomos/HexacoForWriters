@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    var characters = Character.testData
+    @State var characters = Character.testData
     
     var body: some View {
         TabView {
-            Text("New Inventory").padding()
+            NewCharacterView(characters: $characters)
                 .tabItem {
-                    Label("New Inventory", image: "plus")
+                    Label("New Character", systemImage: "person")
                 }
-            CompletedInventoryList(characters: characters)
+            CompletedInventoryListView(characters: $characters)
+                .tabItem {
+                    Label("Character List", systemImage: "person.2.fill")
+                }
         }
         
     }

@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct CompletedInventoryListView: View {
-    var characters: [Character]
+    @Binding var characters: [Character]
     
     var body: some View {
-        
         List {
             ForEach(characters) { character in
                 
@@ -56,8 +55,11 @@ struct CompletedInventoryListView: View {
 }
 
 struct CompletedInventoryList_Previews: PreviewProvider {
+    @State static var characters = Character.testData
     static var previews: some View {
-        CompletedInventoryListView(characters: Character.testData)
+        Group {
+            CompletedInventoryListView(characters: $characters)
+        }
     }
 }
 
