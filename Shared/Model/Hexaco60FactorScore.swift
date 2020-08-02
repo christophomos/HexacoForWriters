@@ -20,4 +20,8 @@ struct Hexaco60FactorScore {
         }
         self.value = value
     }
+    
+    static func random() -> Hexaco60FactorScore {
+        Hexaco60FactorScore(value: Int.random(in: Hexaco60FactorScore.min...Hexaco60FactorScore.max))
+    }
 }

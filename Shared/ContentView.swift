@@ -10,7 +10,17 @@ import SwiftUI
 struct ContentView: View {
     
     var body: some View {
-        Text("Hello, world!").padding()
+        TabView {
+            Text("Hello, world!").padding()
+                .tabItem {
+                    Label("New Inventory", image: "plus")
+                }
+            Text("Hello, world!").padding()
+                .tabItem {
+                    Label("Completed Inventories", image: "clock.fill")
+                }
+        }
+        
     }
 }
 

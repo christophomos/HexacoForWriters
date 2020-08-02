@@ -15,4 +15,14 @@ struct Hexaco60InventoryScore {
     let a: Hexaco60FactorScore
     let c: Hexaco60FactorScore
     let o: Hexaco60FactorScore
+    
+    static func random() -> Hexaco60InventoryScore {
+        Hexaco60InventoryScore(
+            h: Hexaco60FactorScore.random(),
+            e: Hexaco60FactorScore.random(),
+            x: Hexaco60FactorScore.random(),
+            a: Hexaco60FactorScore.random(),
+            c: Hexaco60FactorScore.random(),
+            o: Hexaco60FactorScore.random())
+    }
 }
