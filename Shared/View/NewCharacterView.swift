@@ -54,7 +54,7 @@ struct NewCharacterView: View {
                 
             }
             
-        } else {
+        } else if InventoryStateMachine.stateGivenNew(character: newCharacter) == .inventoryInProgress  {
             VStack {
                 Text("Question \(responses.count) of \(Hexaco60Inventory.questions.count)")
                     .padding()
@@ -70,9 +70,15 @@ struct NewCharacterView: View {
                         responses.append(
                             Hexaco60ItemScore(value: Int(currentResponse))
                         )
+                        if responses.count == Hexaco60Inventory.questions.count {
+                            let completedInventory = Hexaco60CompletedInventory(formQuestions: Hexaco60Inventory.questions, responses: responses)
+                            newCharacter.hexaco = completedInventory.score
+                        }
                     }
                 }
             }
+        } else {
+            
         }
         
     }
