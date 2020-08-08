@@ -14,7 +14,6 @@ struct ContentView: View {
     var body: some View {
         CompletedInventoryListView(characters: $characters)
             .toolbar {
-                //https://swiftwithmajid.com/2020/07/15/mastering-toolbars-in-swiftui/
                 ToolbarItem {
                     Button("New Character Inventory") {
                         isShowNewInventory = true
@@ -27,7 +26,8 @@ struct ContentView: View {
             }
             content:
             {
-                NewCharacterView(characters: $characters)
+                NewCharacterView(
+                    isShowNewInventory: $isShowNewInventory, characters: $characters)
             }
     }
 }

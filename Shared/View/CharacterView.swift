@@ -58,3 +58,9 @@ fileprivate func intOrNA(_ int: Int?) -> String {
     }
 }
 
+struct CharacterView_Previews: PreviewProvider {
+    @State static var character = Character.testData[0]
+    static var previews: some View {
+        CharacterView(character: character)
+    }
+}

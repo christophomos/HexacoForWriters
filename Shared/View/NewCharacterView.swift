@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct NewCharacterView: View {
+    @Binding var isShowNewInventory: Bool
     @Binding var characters: [Character]
     @State var newCharacter = Character()
     @State var firstName = ""
@@ -56,7 +57,7 @@ struct NewCharacterView: View {
             
         } else if InventoryStateMachine.stateGivenNew(character: newCharacter) == .inventoryInProgress  {
             VStack {
-                Text("Question \(responses.count) of \(Hexaco60Inventory.questions.count)")
+                Text("Question \(responses.count + 1) of \(Hexaco60Inventory.questions.count)")
                     .padding()
                 Text(Hexaco60Inventory.questions[responses.count].text)
                 Form {
@@ -78,15 +79,24 @@ struct NewCharacterView: View {
                 }
             }
         } else {
-            
+            VStack {
+                CharacterView(character: newCharacter)
+                Button("Save character") {
+                    characters.append(newCharacter)
+                    isShowNewInventory = false
+                }
+            }
         }
         
     }
 }
 
 struct NewCharacterView_Previews: PreviewProvider {
+    @State static var isShowNewInventory = true
     @State static var characters = Character.testData
     static var previews: some View {
-        NewCharacterView(characters: $characters)
+        NewCharacterView(
+            isShowNewInventory: $isShowNewInventory,
+            characters: $characters)
     }
 }

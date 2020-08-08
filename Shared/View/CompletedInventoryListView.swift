@@ -16,8 +16,6 @@ struct CompletedInventoryListView: View {
                 CharacterView(character: character)
             }
         }
-        
-        
     }
 }
 
