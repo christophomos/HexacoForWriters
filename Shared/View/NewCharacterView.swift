@@ -9,8 +9,28 @@ import SwiftUI
 
 struct NewCharacterView: View {
     @Binding var characters: [Character]
+    @State var newCharacter = Character()
     var body: some View {
-        Text("New Inventory")
+        if  InventoryStateMachine.stateGivenNew(character: newCharacter) == .inventoryNotStarted {
+            VStack {
+                Text("To begin a new inventory, fill in at minimum your character's first and/or last name. The other fields are optional.")
+                    .multilineTextAlignment(.center)
+//                Form {
+//                    Text
+//                }
+            }
+            .navigationBarBackButtonHidden(true)
+            .toolbar(items: {
+                ToolbarItem {
+                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Content@*/Text("Placeholder")/*@END_MENU_TOKEN@*/
+                }
+            })
+        } else {
+            VStack {
+                Text("State not yet implemented")
+            }
+        }
+        
     }
 }
 

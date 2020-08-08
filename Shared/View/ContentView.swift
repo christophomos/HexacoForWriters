@@ -9,19 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     @State var characters = Character.testData
+    @State var isShowNewInventory = false
     
     var body: some View {
-        TabView {
-            NewCharacterView(characters: $characters)
-                .tabItem {
-                    Label("New Character", systemImage: "person")
+        CompletedInventoryListView(characters: $characters)
+            .toolbar {
+                //https://swiftwithmajid.com/2020/07/15/mastering-toolbars-in-swiftui/
+                ToolbarItem {
+                    Button("New Character Inventory") {
+                        isShowNewInventory = true
+                        print(isShowNewInventory)
+                    }
                 }
-            CompletedInventoryListView(characters: $characters)
-                .tabItem {
-                    Label("Character List", systemImage: "person.2.fill")
-                }
-        }
-        
+            }
+            .sheet(isPresented: $isShowNewInventory) {
+                isShowNewInventory = false
+            }
+            content:
+            {
+                NewCharacterView(characters: $characters)
+            }
     }
 }
 

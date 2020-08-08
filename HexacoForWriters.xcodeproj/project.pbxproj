@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1520B73E24D70B5100DC7495 /* NewCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1520B73D24D70B5100DC7495 /* NewCharacterView.swift */; };
 		1520B73F24D70B5100DC7495 /* NewCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1520B73D24D70B5100DC7495 /* NewCharacterView.swift */; };
+		1520B74124D710FC00DC7495 /* InventoryStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1520B74024D710FC00DC7495 /* InventoryStateMachine.swift */; };
+		1520B74224D710FC00DC7495 /* InventoryStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1520B74024D710FC00DC7495 /* InventoryStateMachine.swift */; };
+		1520B74324D710FC00DC7495 /* InventoryStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1520B74024D710FC00DC7495 /* InventoryStateMachine.swift */; };
 		156EDEA324D6453B00D91BF5 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDEA224D6453B00D91BF5 /* Tests_iOS.swift */; };
 		156EDEAE24D6453B00D91BF5 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDEAD24D6453B00D91BF5 /* Tests_macOS.swift */; };
 		156EDEB024D6453B00D91BF5 /* HexacoForWritersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDE8724D6453A00D91BF5 /* HexacoForWritersApp.swift */; };
@@ -81,6 +84,7 @@
 
 /* Begin PBXFileReference section */
 		1520B73D24D70B5100DC7495 /* NewCharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCharacterView.swift; sourceTree = "<group>"; };
+		1520B74024D710FC00DC7495 /* InventoryStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryStateMachine.swift; sourceTree = "<group>"; };
 		156EDE8724D6453A00D91BF5 /* HexacoForWritersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexacoForWritersApp.swift; sourceTree = "<group>"; };
 		156EDE8824D6453A00D91BF5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		156EDE8924D6453B00D91BF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -151,6 +155,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1520B74424D711BD00DC7495 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				1520B74024D710FC00DC7495 /* InventoryStateMachine.swift */,
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
 		156EDE8124D6453A00D91BF5 = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				156EDEC424D6466C00D91BF5 /* Model */,
+				1520B74424D711BD00DC7495 /* ModelView */,
 				156EDF1524D682B400D91BF5 /* View */,
 				156EDE8724D6453A00D91BF5 /* HexacoForWritersApp.swift */,
 				156EDE8924D6453B00D91BF5 /* Assets.xcassets */,
@@ -460,6 +473,7 @@
 				156EDEE024D646AD00D91BF5 /* Scale.swift in Sources */,
 				156EDEDE24D646AD00D91BF5 /* Hexaco60ItemScore.swift in Sources */,
 				156EDEB024D6453B00D91BF5 /* HexacoForWritersApp.swift in Sources */,
+				1520B74124D710FC00DC7495 /* InventoryStateMachine.swift in Sources */,
 				156EDEDA24D646AD00D91BF5 /* Hexaco60InventoryScore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +496,7 @@
 				156EDEE124D646AD00D91BF5 /* Scale.swift in Sources */,
 				156EDEDF24D646AD00D91BF5 /* Hexaco60ItemScore.swift in Sources */,
 				156EDEB124D6453B00D91BF5 /* HexacoForWritersApp.swift in Sources */,
+				1520B74224D710FC00DC7495 /* InventoryStateMachine.swift in Sources */,
 				156EDEDB24D646AD00D91BF5 /* Hexaco60InventoryScore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,6 +525,7 @@
 				156EDF1424D6520000D91BF5 /* Hexaco60FactorScore.swift in Sources */,
 				156EDF0E24D6520000D91BF5 /* Hexaco60ItemScore.swift in Sources */,
 				156EDF0D24D6520000D91BF5 /* Gender.swift in Sources */,
+				1520B74324D710FC00DC7495 /* InventoryStateMachine.swift in Sources */,
 				156EDF1324D6520000D91BF5 /* HexacoInventoryItem.swift in Sources */,
 				156EDF0F24D6520000D91BF5 /* Hexaco60Scale.swift in Sources */,
 				156EDF0324D651DF00D91BF5 /* HexacoForWritersTests.swift in Sources */,

@@ -13,7 +13,6 @@ struct CompletedInventoryListView: View {
     var body: some View {
         List {
             ForEach(characters) { character in
-                
                 VStack {
                     HStack {
                         VStack(alignment: .leading) {
@@ -57,9 +56,7 @@ struct CompletedInventoryListView: View {
 struct CompletedInventoryList_Previews: PreviewProvider {
     @State static var characters = Character.testData
     static var previews: some View {
-        Group {
-            CompletedInventoryListView(characters: $characters)
-        }
+        CompletedInventoryListView(characters: $characters)
     }
 }
 

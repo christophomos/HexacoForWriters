@@ -8,13 +8,13 @@
 import XCTest
 
 class HexacoForWritersTests: XCTestCase {
-
+    
     override func setUpWithError() throws {
     }
-
+    
     override func tearDownWithError() throws {
     }
-
+    
     
     func testHexaco60ItemScore_rawMinimumScore() {
         var testResponses: [Hexaco60ItemScore] = []
@@ -38,6 +38,7 @@ class HexacoForWritersTests: XCTestCase {
         XCTAssertEqual(valueSum, 300)
     }
     
+    // TODO: each test should have a single assertion
     func testHexaco60Inventory_correctFactorItemRatio() {
         var hCount = 0
         var eCount = 0
@@ -92,7 +93,7 @@ class HexacoForWritersTests: XCTestCase {
         XCTAssertEqual(test.score.o.value, Hexaco60ScaleScore.min)
     }
     
-    func testHexaco60Inventory_maximumFactoreScores() {
+    func testHexaco60Inventory_maximumFactorScores() {
         var testResponses: [Hexaco60ItemScore] = []
         for question in Hexaco60Inventory.questions  {
             let responseValue: Int
@@ -112,5 +113,24 @@ class HexacoForWritersTests: XCTestCase {
         XCTAssertEqual(test.score.a.value, Hexaco60ScaleScore.max)
         XCTAssertEqual(test.score.c.value, Hexaco60ScaleScore.max)
         XCTAssertEqual(test.score.o.value, Hexaco60ScaleScore.max)
+    }
+    
+    func testInventoryStateMachine_inventoryNotStarted() {
+        let character = Character()
+        XCTAssertEqual(
+            InventoryStateMachine.stateGivenNew(character: character), InventoryState.inventoryNotStarted)
+    }
+    
+    func testInventoryStateMachine_whenOnlyLastNameNotNil_inventoryInProgress() {
+        let character = Character(lastName: "Clark")
+        XCTAssertEqual(
+            InventoryStateMachine.stateGivenNew(character: character), InventoryState.inventoryInProgress)
+    }
+    
+    // TODO: Remove randomization for consistent tests
+    func testInventoryStateMachine_whenHexacoComplete_inventoryComplete() {
+        let character = Character(lastName: "Clark", hexaco: Hexaco60InventoryScore.random())
+        XCTAssertEqual(
+            InventoryStateMachine.stateGivenNew(character: character), InventoryState.inventoryComplete)
     }
 }

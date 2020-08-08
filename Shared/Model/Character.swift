@@ -20,6 +20,10 @@ struct Character: Identifiable {
     
     var hexaco: Hexaco60InventoryScore? = nil
     
+    var isHaveAName: Bool {
+        (firstName != nil) || (lastName != nil)
+    }
+    
     static let testData = [
         Character(
             firstName: "Evan",
