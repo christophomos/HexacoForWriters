@@ -8,16 +8,19 @@
 
 import Foundation
 
-enum Gender: CustomStringConvertible {
+enum Gender: CustomStringConvertible, CaseIterable {
+    
     case male
     case female
-    case other(description: String)
+    // TODO: Implement other
+    case other //(description: String)
     
     var description: String {
         switch self {
         case .male: return "Male"
         case .female: return "Female"
-        case let .other(description): return description
+        case .other: return "Other"
+        // case let .other(description): return description
         }
     }
 }
