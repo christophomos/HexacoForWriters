@@ -24,6 +24,15 @@ struct Character: Identifiable {
         (firstName != nil) || (lastName != nil)
     }
     
+    static let sampleCharacter = [
+        Character(
+            firstName: "Jane",
+            lastName: "Doe",
+            gender: .female,
+            age: 33,
+            hexaco: Hexaco60InventoryScore.random()),
+    ]
+    
     static let testData = [
         Character(
             firstName: "Evan",

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var characters = Character.testData
+    @State var characters = Character.sampleCharacter
     @State var isShowNewInventory = false
     
     var body: some View {
