@@ -11,8 +11,6 @@ struct NewCharacterView: View {
     @Binding var isShowNewInventory: Bool
     @Binding var characters: [Character]
     @State var newCharacter = Character()
-
-    @State var currentResponse = 1.0
     
     @State var responses: [Hexaco60ItemScore] = []
     
@@ -21,28 +19,7 @@ struct NewCharacterView: View {
             CharacterFormView(newCharacter: $newCharacter)
             
         } else if InventoryStateMachine.stateGivenNew(character: newCharacter) == .inventoryInProgress  {
-            VStack {
-                Text("Question \(responses.count + 1) of \(Hexaco60Inventory.questions.count)")
-                    .padding()
-                Text(Hexaco60Inventory.questions[responses.count].text)
-                Form {
-                    VStack {
-                        Text("Score: \(Int(currentResponse.rounded()))")
-                        Slider(
-                            value: $currentResponse,
-                            in: 1...5)
-                    }.padding()
-                    Button ("Next Question") {
-                        responses.append(
-                            Hexaco60ItemScore(value: Int(currentResponse))
-                        )
-                        if responses.count == Hexaco60Inventory.questions.count {
-                            let completedInventory = Hexaco60CompletedInventory(formQuestions: Hexaco60Inventory.questions, responses: responses)
-                            newCharacter.hexaco = completedInventory.score
-                        }
-                    }
-                }
-            }
+            QuestionView(responses: $responses, newCharacter: $newCharacter)
         } else {
             VStack {
                 CharacterView(character: newCharacter)
@@ -65,4 +42,3 @@ struct NewCharacterView_Previews: PreviewProvider {
             characters: $characters)
     }
 }
-
