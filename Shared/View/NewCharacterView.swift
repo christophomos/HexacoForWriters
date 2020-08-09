@@ -14,22 +14,37 @@ struct NewCharacterView: View {
     
     @State var responses: [Hexaco60ItemScore] = []
     
+    @State var showCancelAlert = false
+    
     var body: some View {
-        if  InventoryStateMachine.stateGivenNew(character: newCharacter) == .inventoryNotStarted {
-            CharacterFormView(newCharacter: $newCharacter)
-            
-        } else if InventoryStateMachine.stateGivenNew(character: newCharacter) == .inventoryInProgress  {
-            QuestionView(responses: $responses, newCharacter: $newCharacter)
-        } else {
-            VStack {
-                CharacterView(character: newCharacter)
-                Button("Save character") {
-                    characters.append(newCharacter)
-                    isShowNewInventory = false
+        VStack {
+            if  InventoryStateMachine.stateGivenNew(character: newCharacter) == .inventoryNotStarted {
+                
+                CharacterFormView(newCharacter: $newCharacter)
+            } else if InventoryStateMachine.stateGivenNew(character: newCharacter) == .inventoryInProgress  {
+                QuestionView(responses: $responses, newCharacter: $newCharacter)
+            } else {
+                VStack {
+                    CharacterView(character: newCharacter)
+                    Button("Save character") {
+                        characters.append(newCharacter)
+                        isShowNewInventory = false
+                    }
                 }
             }
+            Button("Cancel Test") {
+                showCancelAlert = true
+            }
         }
-        
+        .alert(isPresented: $showCancelAlert) {
+            Alert(title: Text("Are you sure you want to end the test?"), message: Text("Character information will not be saved"),
+                primaryButton: Alert.Button.destructive(Text("Yes"), action: {
+                    newCharacter = Character()
+                    isShowNewInventory = false
+                }),
+                secondaryButton: Alert.Button.cancel(Text("No"))
+            )
+        }
     }
 }
 
