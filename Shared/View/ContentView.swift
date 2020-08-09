@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var characters = Character.sampleCharacter
     @State var isShowNewInventory = false
+    @State var isShowIntroduction = true
     
     var body: some View {
         CompletedInventoryListView(characters: $characters)
@@ -22,8 +23,28 @@ struct ContentView: View {
                         }
                         .padding(.bottom)
                         .font(.largeTitle)
+                        .sheet(isPresented: $isShowIntroduction) {
+                            isShowIntroduction = false
+                        }
+                        content:
+                        {
+                            VStack {
+                                Spacer()
+                                Image("HEXACO_head")
+                                Text("Welcome to HEXACO for Writers. Take a personality test on behalf of your fictional characters.")
+                                    .padding(.bottom)
+                                Link("Learn more about the HEXACO Personality Inventory", destination: URL(string: "https://hexaco.org/")!)
+                                    .padding()
+                                Button("Begin") {
+                                    isShowIntroduction = false
+                                }
+                                .font(.largeTitle)
+                                Spacer()
+                            }
+                        }
                         Spacer()
                     }
+                    .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 }
                 
             }
