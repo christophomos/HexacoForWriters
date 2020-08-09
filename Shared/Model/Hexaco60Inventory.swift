@@ -30,7 +30,7 @@ struct Hexaco60Inventory {
         HexacoInventoryItem(
             reversed: false,
             hexacoScale: .x,
-            text: "He/she would feel afraid if he/she had to travel in bad weather conditions."),
+            text: "He/she feels reasonably satisfied with himself/herself overall."),
         // 5
         HexacoInventoryItem(
             reversed: false,

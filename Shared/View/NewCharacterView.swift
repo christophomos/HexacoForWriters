@@ -11,49 +11,14 @@ struct NewCharacterView: View {
     @Binding var isShowNewInventory: Bool
     @Binding var characters: [Character]
     @State var newCharacter = Character()
-    @State var firstName = ""
-    @State var lastName = ""
-    @State var gender = Gender.female
-    @State var age = 0.0
-    
+
     @State var currentResponse = 1.0
     
     @State var responses: [Hexaco60ItemScore] = []
     
     var body: some View {
         if  InventoryStateMachine.stateGivenNew(character: newCharacter) == .inventoryNotStarted {
-            VStack {
-                Text("Before you begin a new inventory, you must fill in your character's first and/or last name.")
-                    .multilineTextAlignment(.center)
-                // Navigation view is for use with Picker
-                
-                Form {
-                    TextField("First name", text: $firstName)
-                    TextField("Last name", text: $lastName)
-                    //https://github.com/onmyway133/blog/issues/611
-                    VStack {
-                        Text("Gender")
-                        Picker(selection: $gender, label: Text("Gender")) {
-                            ForEach(Gender.allCases, id: \.self) {
-                                Text($0.description)
-                            }
-                        }
-                        .pickerStyle(SegmentedPickerStyle())
-                    }
-                    VStack {
-                        Text("Age: \(Int(age.rounded()))")
-                        Slider(value: $age, in: 0...100)
-                    }.padding()
-                    Button ("Begin HEXACO") {
-                        newCharacter.firstName = firstName
-                        newCharacter.lastName = lastName
-                        newCharacter.gender = gender
-                        newCharacter.age = Int(age.rounded())
-                    }
-                    .disabled(firstName.isEmpty && lastName.isEmpty)
-                }
-                
-            }
+            CharacterFormView(newCharacter: $newCharacter)
             
         } else if InventoryStateMachine.stateGivenNew(character: newCharacter) == .inventoryInProgress  {
             VStack {
@@ -100,3 +65,4 @@ struct NewCharacterView_Previews: PreviewProvider {
             characters: $characters)
     }
 }
+

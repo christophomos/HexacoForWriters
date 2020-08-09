@@ -14,12 +14,18 @@ struct ContentView: View {
     var body: some View {
         CompletedInventoryListView(characters: $characters)
             .toolbar {
+                
                 ToolbarItem {
-                    Button("New Character Inventory") {
-                        isShowNewInventory = true
-                        print(isShowNewInventory)
+                    VStack {
+                        Button("New Character Inventory") {
+                            isShowNewInventory = true
+                        }
+                        .padding(.bottom)
+                        .font(.largeTitle)
+                        Spacer()
                     }
                 }
+                
             }
             .sheet(isPresented: $isShowNewInventory) {
                 isShowNewInventory = false
